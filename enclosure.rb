@@ -11,7 +11,7 @@ Facter.add(:enclosure, :timeout => 10) do
   enclosure = 'onbekend'
   
     begin
-      data = YAML::load(open('http://xxx/pub/puppet/enclosures.yaml'));
+      data = YAML::load(open('<url_to_yaml>'));
       # Hostname fact gebruiken voor nodenaam
       serial = Facter.value('serialnumber')
       # Alle enclosures verzamelen
